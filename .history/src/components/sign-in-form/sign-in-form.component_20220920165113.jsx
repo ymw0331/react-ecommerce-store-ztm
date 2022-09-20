@@ -18,7 +18,7 @@ const defaultFormFields = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
-  // console.log(formFields);
+  console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -91,7 +91,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button buttonType="default" type="submit">
+        <Button buttonType="google" type="submit">
           Sign Up
         </Button>
       </form>

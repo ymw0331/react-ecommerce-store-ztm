@@ -6,19 +6,17 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase.utils.js";
 
-import "./sign-up-form.styles.scss";
+import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
-  displayName: "",
   email: "",
   password: "",
-  confirmPassword: "",
 };
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const { displayName, email, password, confirmPassword } = formFields;
-  // console.log(formFields);
+  const { email, password } = formFields;
+  console.log(formFields);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -26,24 +24,8 @@ const SignUpForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Password is not matched!");
-      return;
-    }
     try {
-      const { user } = await createAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      await createUserDocumentFromAuth(user, { displayName });
-      resetFormFields();
-    } catch (error) {
-      if (error.code === "auth/email-already-in-use") {
-        alert("Cannot create user, email already in use!");
-      } else {
-        console.log("User creation encountered an error", error);
-      }
-    }
+    } catch (error) {}
   };
 
   const handleChange = (event) => {
@@ -53,7 +35,7 @@ const SignUpForm = () => {
 
   return (
     <div className="sign-up-container">
-      <h2>Don't have an account?</h2>
+      <h2> have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput
@@ -91,7 +73,7 @@ const SignUpForm = () => {
           name="confirmPassword"
           value={confirmPassword}
         />
-        <Button buttonType="default" type="submit">
+        <Button buttonType="google" type="submit">
           Sign Up
         </Button>
       </form>
@@ -99,4 +81,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SignInForm;
