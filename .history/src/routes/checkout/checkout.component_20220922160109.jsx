@@ -1,0 +1,38 @@
+import { useContext } from "react";
+import { CartContext } from "../../contexts/cart.contexts";
+
+import "./checkout.styles.scss";
+
+const CheckOut = () => {
+  const { cartItems, addItemToCart, removeItemFromCart } =
+    useContext(CartContext);
+
+  return (
+    <div className="checkout-container">
+    <div className="checkout-header">
+    <h1 >I am the checkout page</h1>
+    </div>
+
+      <div>
+        {cartItems.map((cartItem) => {
+          const { id, name, quantity } = cartItem;
+
+          return (
+            <div key={id}>
+              <h2>{name}</h2>
+              <span>{quantity}</span>
+              <br />
+              <span onClick={() => removeItemFromCart(cartItem)}>
+                decrement
+              </span>
+              <br />
+              <span onClick={() => addItemToCart(cartItem)}>increment </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default CheckOut;
