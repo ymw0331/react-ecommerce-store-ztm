@@ -1,0 +1,71 @@
+[33mcommit efe394c8aaeb1e6e0972e44b0a6a96f97c2e2afa[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Fri Sep 23 21:59:46 2022 +0800
+
+    added firebase database storage, able to retrieve data, but with css error
+
+[33mcommit ae4a3083db4c1dd0f20ec866dc2afc031c75aa4a[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Thu Sep 22 16:52:48 2022 +0800
+
+    created checkout page with checkout items and checkout cart functionality
+
+[33mcommit 83342133ba22e99322212276909b98b9f19347ab[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Wed Sep 21 21:43:46 2022 +0800
+
+    added in our addToCart feature
+
+[33mcommit 6ab98fea2dd9a7879cbfb7003c006b051ec6c90a[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Wed Sep 21 19:45:02 2022 +0800
+
+    adding cart context and shopping icon as well as cart dropdown
+
+[33mcommit d7dd89d4e55b86123b414cd57c2c87f9726fbb39[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Wed Sep 21 14:58:48 2022 +0800
+
+    added user context
+
+[33mcommit 1d919b2b5d616f80ee6973d24bbe60b888fa6222[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Wed Sep 21 10:28:29 2022 +0800
+
+    created authentication page component alognside sign in form
+
+[33mcommit a007a719d49f0121b83a6173e50a3373979ac6e5[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Tue Sep 20 22:58:00 2022 +0800
+
+    created authentication page component alongside sign in form
+
+[33mcommit 1bf057255f23eb60a198cd0423eed564fee6eabb[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Tue Sep 20 16:55:54 2022 +0800
+
+    created sign up component, the form input component, button component
+
+[33mcommit b9c9585a2d79f53e72908d8bc408e19b9b59d931[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Mon Sep 19 17:23:36 2022 +0800
+
+    added sign in component as well as firebase utils and brought in firebase libraries
+
+[33mcommit f3617173b5fab32906d72224053e3ba55b8703d9[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Sun Sep 18 23:59:45 2022 +0800
+
+    add routing using react router
+
+[33mcommit 228842d36a42bd99400ae008b02103ce21ce7cb6[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Sun Sep 18 20:57:16 2022 +0800
+
+    updating directory page with directory component and category item component
+
+[33mcommit d6a3c6e35a3bd8372b5d522c1b33daa3a6b925b7[m
+Author: Wayne Yong <ymw0331@gmail.com>
+Date:   Sun Sep 18 18:31:49 2022 +0800
+
+    Initialize project using Create React App
