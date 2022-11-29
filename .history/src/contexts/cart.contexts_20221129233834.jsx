@@ -1,6 +1,4 @@
-import { createContext, useReducer } from "react";
-
-import { createAction } from "../reducer/reducer.utils.js";
+import { createContext, useState, useEffect, useReducer } from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
   // find if cartItem contains productToAdd
@@ -45,7 +43,7 @@ const clearCartItem = (cartItems, cartItemToClear) => {
 };
 
 export const CartContext = createContext({
-  isCartOpen: false,
+  isCartOpen: true,
   setIsCartOpen: () => {},
   cartItems: [],
   addItemToCart: () => {},
@@ -54,11 +52,6 @@ export const CartContext = createContext({
   cartCount: 0,
   cartTotal: 0,
 });
-
-const CART_ACTION_TYPES = {
-  SET_CART_ITEMS: "SET_CART_ITEMS",
-  SET_IS_CART_OPEN: "SET_IS_CART_OPEN",
-};
 
 const INITIAL_STATE = {
   isCartOpen: false,
@@ -71,15 +64,10 @@ const cartReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
-    case CART_ACTION_TYPES.SET_CART_ITEMS:
+    case "SET_CART_ITEMS":
       return {
         ...state,
         ...payload,
-      };
-    case CART_ACTION_TYPES.SET_IS_CART_OPEN:
-      return {
-        ...state,
-        isCartOpen: payload,
       };
     default:
       throw new Error(`Unhandled type of ${type} in cartReducer`);
@@ -101,13 +89,14 @@ export const CartProvider = ({ children }) => {
       0
     );
 
-    dispatch(
-      createAction(CART_ACTION_TYPES.SET_CART_ITEMS, {
+    dispatch({
+      type: "SET_CART_ITEMS",
+      payload: {
         cartItems: newCartItems,
         cartTotal: newCartTotal,
         cartCount: newCartCount,
-      })
-    );
+      },
+    });
   };
 
   const addItemToCart = (productToAdd) => {
@@ -125,13 +114,9 @@ export const CartProvider = ({ children }) => {
     updateCartItemsReducer(newCartItems);
   };
 
-  const setIsCartOpen = (bool) => {
-    dispatch(createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, bool));
-  };
-
   const value = {
     isCartOpen,
-    setIsCartOpen,
+    setIsCartOpen: () => {},
     addItemToCart,
     removeItemFromCart,
     clearItemFromCart,

@@ -1,5 +1,4 @@
 import { createContext, useEffect, useReducer } from "react";
-import { createAction } from "../reducer/reducer.utils.js";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
@@ -17,11 +16,10 @@ export const USER_ACTION_TYPES = {
   SET_CURRENT_USER: "SET_CURRENT_USER",
 };
 
-// create a reducer function
 const userReducer = (state, action) => {
   console.log("dispatched");
   console.log(action);
-  const { type, payload } = action; // 2 possible prop of type and payload
+  const { type, payload } = action;
 
   switch (type) {
     case USER_ACTION_TYPES.SET_CURRENT_USER:
@@ -35,23 +33,16 @@ const userReducer = (state, action) => {
 };
 
 const INITIAL_STATE = {
-  currentUser: null, // no user when initialised
+  currentUser: null,
 };
 
 export const UserProvider = ({ children }) => {
   // const [currentUser, setCurrentUser] = useState(null);
   const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
-  console.log(currentUser);
-
-  const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
-  };
-
-  const value = { currentUser, setCurrentUser };
-
-  useEffect(() => {
-    // open listener, listening to changes if user sign out, we store null, else we store the object
+  console.log(currentUser);0
+    // if user sign out, we store null, else we store the object
     const unsubsribe = onAuthStateChangedListener((user) => {
+      // console.log(user);
       if (user) {
         createUserDocumentFromAuth(user);
       }

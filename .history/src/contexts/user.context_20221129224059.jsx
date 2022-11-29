@@ -1,5 +1,4 @@
-import { createContext, useEffect, useReducer } from "react";
-import { createAction } from "../reducer/reducer.utils.js";
+import { createContext, useState, useEffect, useReducer } from "react";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
@@ -13,45 +12,42 @@ export const UserContext = createContext({
   currentUser: null,
 });
 
-export const USER_ACTION_TYPES = {
-  SET_CURRENT_USER: "SET_CURRENT_USER",
-};
+{
+  currentUser: null || googleAuthObj, 
+  firstName
+}
 
-// create a reducer function
+export const 
+
 const userReducer = (state, action) => {
-  console.log("dispatched");
-  console.log(action);
-  const { type, payload } = action; // 2 possible prop of type and payload
+  const { type, payload } = action;
 
-  switch (type) {
-    case USER_ACTION_TYPES.SET_CURRENT_USER:
+  switch(type){
+    case 'SET_CURRENT_USER':
       return {
-        ...state,
-        currentUser: payload,
-      };
+        currentUser:payload
+      }
+    case 'increment':
+      return{
+        currentUser: payload
+      }
     default:
       throw new Error(`Unhandled type ${type} in userReducer`);
   }
 };
 
-const INITIAL_STATE = {
-  currentUser: null, // no user when initialised
-};
-
 export const UserProvider = ({ children }) => {
-  // const [currentUser, setCurrentUser] = useState(null);
-  const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
-  console.log(currentUser);
-
-  const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
-  };
-
+  const [currentUser, setCurrentUser] = useState(null);
   const value = { currentUser, setCurrentUser };
 
+  // the moment that the user provider mounted
+  //   signOutUser();
+
   useEffect(() => {
-    // open listener, listening to changes if user sign out, we store null, else we store the object
+    // open listener, listening to changes
+    // if user sign out, we store null, else we store the object
     const unsubsribe = onAuthStateChangedListener((user) => {
+      // console.log(user);
       if (user) {
         createUserDocumentFromAuth(user);
       }
@@ -65,7 +61,9 @@ export const UserProvider = ({ children }) => {
 };
 
 /*
+
 const userReducer = (state, action) =>{
+
   return{
     currentUser : 
   }

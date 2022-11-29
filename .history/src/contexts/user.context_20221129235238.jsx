@@ -44,7 +44,7 @@ export const UserProvider = ({ children }) => {
   console.log(currentUser);
 
   const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
+    dispatch(crearteAction(USER_ACTION_TYPES.SET_CURRENT_USER, payload: user) });
   };
 
   const value = { currentUser, setCurrentUser };

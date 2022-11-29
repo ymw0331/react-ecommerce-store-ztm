@@ -1,6 +1,4 @@
-import { createContext, useReducer } from "react";
-
-import { createAction } from "../reducer/reducer.utils.js";
+import { createContext, useState, useEffect, useReducer } from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
   // find if cartItem contains productToAdd
@@ -76,7 +74,7 @@ const cartReducer = (state, action) => {
         ...state,
         ...payload,
       };
-    case CART_ACTION_TYPES.SET_IS_CART_OPEN:
+    case SET_IS_CART_OPEN:
       return {
         ...state,
         isCartOpen: payload,
@@ -101,13 +99,14 @@ export const CartProvider = ({ children }) => {
       0
     );
 
-    dispatch(
-      createAction(CART_ACTION_TYPES.SET_CART_ITEMS, {
+    dispatch({
+      type: "SET_CART_ITEMS",
+      payload: {
         cartItems: newCartItems,
         cartTotal: newCartTotal,
         cartCount: newCartCount,
-      })
-    );
+      },
+    });
   };
 
   const addItemToCart = (productToAdd) => {
@@ -126,7 +125,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const setIsCartOpen = (bool) => {
-    dispatch(createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, bool));
+    dispatch({ type: "SET_IS_CART_OPEN", payload: bool });
   };
 
   const value = {

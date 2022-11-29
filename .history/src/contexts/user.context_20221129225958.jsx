@@ -1,5 +1,4 @@
 import { createContext, useEffect, useReducer } from "react";
-import { createAction } from "../reducer/reducer.utils.js";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
@@ -35,7 +34,7 @@ const userReducer = (state, action) => {
 };
 
 const INITIAL_STATE = {
-  currentUser: null, // no user when initialised
+  currentUser: null,
 };
 
 export const UserProvider = ({ children }) => {
@@ -44,14 +43,17 @@ export const UserProvider = ({ children }) => {
   console.log(currentUser);
 
   const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
+    dispatch({ type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user });
   };
 
   const value = { currentUser, setCurrentUser };
 
+
   useEffect(() => {
-    // open listener, listening to changes if user sign out, we store null, else we store the object
+    // open listener, listening to changes
+    // if user sign out, we store null, else we store the object
     const unsubsribe = onAuthStateChangedListener((user) => {
+      // console.log(user);
       if (user) {
         createUserDocumentFromAuth(user);
       }

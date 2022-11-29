@@ -1,5 +1,4 @@
 import { createContext, useEffect, useReducer } from "react";
-import { createAction } from "../reducer/reducer.utils.js";
 import {
   createUserDocumentFromAuth,
   onAuthStateChangedListener,
@@ -17,14 +16,11 @@ export const USER_ACTION_TYPES = {
   SET_CURRENT_USER: "SET_CURRENT_USER",
 };
 
-// create a reducer function
 const userReducer = (state, action) => {
-  console.log("dispatched");
-  console.log(action);
-  const { type, payload } = action; // 2 possible prop of type and payload
+  const { type, payload } = action;
 
   switch (type) {
-    case USER_ACTION_TYPES.SET_CURRENT_USER:
+    case "SET_CURRENT_USER":
       return {
         ...state,
         currentUser: payload,
@@ -33,25 +29,30 @@ const userReducer = (state, action) => {
       throw new Error(`Unhandled type ${type} in userReducer`);
   }
 };
-
 const INITIAL_STATE = {
-  currentUser: null, // no user when initialised
+  currentUser: null,
 };
 
 export const UserProvider = ({ children }) => {
   // const [currentUser, setCurrentUser] = useState(null);
-  const [{ currentUser }, dispatch] = useReducer(userReducer, INITIAL_STATE);
+  const [state, dispatch] = useReducer(userReducer, INITIAL_STATE);
   console.log(currentUser);
 
+  const { currentUser } = state;
   const setCurrentUser = (user) => {
-    dispatch(createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user));
+    dispatch({ type: USER_ACTION_TYPES.SET_CURRENT_USER, payload: user });
   };
 
   const value = { currentUser, setCurrentUser };
 
+  // the moment that the user provider mounted
+  //   signOutUser();
+
   useEffect(() => {
-    // open listener, listening to changes if user sign out, we store null, else we store the object
+    // open listener, listening to changes
+    // if user sign out, we store null, else we store the object
     const unsubsribe = onAuthStateChangedListener((user) => {
+      // console.log(user);
       if (user) {
         createUserDocumentFromAuth(user);
       }
@@ -65,7 +66,9 @@ export const UserProvider = ({ children }) => {
 };
 
 /*
+
 const userReducer = (state, action) =>{
+
   return{
     currentUser : 
   }
