@@ -1,0 +1,2 @@
+import {} as`` './spinner.styles'
+
