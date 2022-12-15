@@ -1,5 +1,4 @@
 import { createSelector } from 'reselect';
-
 import { UserState } from './user.reducer';
 import { RootState } from '../store';
 

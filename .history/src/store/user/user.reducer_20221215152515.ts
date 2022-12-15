@@ -21,9 +21,8 @@ const INITIAL_STATE: UserState = {
 };
 
 export const userReducer = (
-  state = INITIAL_STATE,
-  action = {} as AnyAction
-) => {
+    state = INITIAL_STATE,
+   action: AnyAction) => {
   if (signInSuccess.match(action)) {
     return { ...state, currentUser: action.payload };
   }
@@ -39,9 +38,7 @@ export const userReducer = (
   ) {
     return { ...state, error: action.payload };
   }
-
-  return state;
-
+  return;
   // switch (type) {
   //   case USER_ACTION_TYPES.SIGN_IN_SUCCESS:
   //     return { ...state, currentUser: payload };

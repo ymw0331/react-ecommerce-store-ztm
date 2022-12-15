@@ -39,9 +39,7 @@ export const userReducer = (
   ) {
     return { ...state, error: action.payload };
   }
-
-  return state;
-
+  return;
   // switch (type) {
   //   case USER_ACTION_TYPES.SIGN_IN_SUCCESS:
   //     return { ...state, currentUser: payload };
