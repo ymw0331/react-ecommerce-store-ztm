@@ -7,12 +7,11 @@ import { checkUserSession } from './store/user/user.action'
 
 
 
-const Navigation = lazy(() => import("./routes/navigation/navigation.component"))
-const Shop = lazy(() => import("./routes/shop/shop.component"))
-const CheckOut = lazy(() => import("./routes/checkout/checkout.component"))
+import Navigation from "./routes/navigation/navigation.component";
+import Shop from "./routes/shop/shop.component";
+import CheckOut from "./routes/checkout/checkout.component";
 const Home = lazy(() => import('./routes/home/home.component'))
 const Authentication = lazy(() => import("./routes/authentication/authentication.component"))
-
 const App = () => {
   const dispatch = useDispatch();
 

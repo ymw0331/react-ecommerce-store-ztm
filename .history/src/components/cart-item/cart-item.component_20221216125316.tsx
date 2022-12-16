@@ -8,7 +8,7 @@ type CartItemProps = {
   cartItem: TCartItem
 }
 
-const CartItem: FC<CartItemProps> = memo(({ cartItem }) => {
+const CartItem: FC<CartItemProps> = memo({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
 
   return (
