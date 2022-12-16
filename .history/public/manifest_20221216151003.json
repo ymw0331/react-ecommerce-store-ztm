@@ -1,6 +1,6 @@
 {
-  "short_name": "React E-Commerce Web App",
-  "name": "React E-Commerce Web App by Ming Wei",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,16 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "crwn-192x192.png",
+      "src": "crwn.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "sizes": "192x192"
     },
     {
-      "src": "crwn-512x512.png",
+      "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
