@@ -7,6 +7,7 @@ export const ProductCartContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
+  
   img {
     width: 100%;
     height: 95%;

@@ -16,14 +16,14 @@ const categories = [
     id: 2,
     title: "Jackets",
     // imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    imageUrl: "https://images.unsplash.com/photo-1561365452-adb940139ffa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80",
+    imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
     route: "shop/jackets",
   },
   {
     id: 3,
     title: "Sneakers",
     // imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    imageUrl: "https://images.unsplash.com/photo-1509472290917-08d8d47c5fca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     route: "shop/sneakers",
   },
   {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ProductCartContainer = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 350px;
   align-items: center;
   position: relative;

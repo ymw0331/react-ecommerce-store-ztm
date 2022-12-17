@@ -2,7 +2,8 @@
   "name": "react-ecommerce-store-webapp",
   "version": "0.1.0",
   "private": true,
-  "author": "Ming Wei Yong <ymw0331@gmail.com>",
+  "author": "Ming Wei Yong  <ymw0331@gmail.com>",
+
   "dependencies": {
     "@stripe/react-stripe-js": "^1.16.1",
     "@stripe/stripe-js": "^1.46.0",

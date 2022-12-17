@@ -23,7 +23,7 @@ const categories = [
     id: 3,
     title: "Sneakers",
     // imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    imageUrl: "https://images.unsplash.com/photo-1509472290917-08d8d47c5fca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
     route: "shop/sneakers",
   },
   {

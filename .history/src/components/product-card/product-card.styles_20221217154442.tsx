@@ -32,6 +32,8 @@ export const ProductCartContainer = styled.div`
 
   @media screen and (max-width: 800px){
     width: 40vw;
+    flex-direction: row;
+
 
     button{
       display: block;

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductCartContainer = styled.div`
   width: 100%;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
@@ -32,6 +32,7 @@ export const ProductCartContainer = styled.div`
 
   @media screen and (max-width: 800px){
     width: 40vw;
+    
 
     button{
       display: block;
