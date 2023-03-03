@@ -1,4 +1,4 @@
-Live Now : https://lucky-gecko-059301.netlify.app/
+Live Now : https://ymw-react-ecommerce.netlify.app/
 
 # Getting Started with Create React App
 
