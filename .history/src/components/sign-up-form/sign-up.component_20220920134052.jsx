@@ -1,7 +1,0 @@
-const signUpForm = () =>{
-    return (
-
-
-    )
-
-}
