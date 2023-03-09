@@ -1,3 +1,25 @@
+What I have learned (ZTM Complete React Developer 2023):
+========================================================
+•	Build enterprise level React applications and deploy to production (using React 18)
+•	Learn to build reactive, performant, large scale applications like a senior developer.
+•	Learn the latest features in React including Hooks, Context API, Suspense, React Lazy + more.
+•	Master the latest ecosystem of a React Developer from scratch.
+•	Using GraphQL as a React Developer
+•	Use Redux, Redux Thunk and Redux Saga in your applications.
+•	Learn to compare tradeoffs when it comes to different state management.
+•	Set up authentication and user accounts.
+•	Use Firebase to build full stack applications.
+•	Learn to lead React projects by making good architecture decisions.
+•	Master React Design Patterns
+•	Learn CSS in JS with styled-components.
+•	Routing with React Router
+•	Converting apps to Progressive Web Apps
+•	Testing your application with Jest, Enzyme, and snapshot testing
+•	Handling online payments with Stripe API
+•	Using the latest ES6/ES7/ES8/ES9/ES10/ES11 JavaScript to write clean code.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
