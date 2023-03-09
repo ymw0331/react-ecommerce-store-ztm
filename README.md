@@ -1,7 +1,7 @@
 What I have learned (ZTM Complete React Developer 2023)
 ========================================================
 
-<ol>
+<ul>
 <li>
 • Build enterprise level React applications and deploy to production (using React 18)
 </li>
@@ -52,7 +52,7 @@ What I have learned (ZTM Complete React Developer 2023)
 • Using the latest ES6/ES7/ES8/ES9/ES10/ES11 JavaScript to write clean code.
 </li>
 
-</ol>
+</ul>
 
 # Getting Started with Create React App
 
