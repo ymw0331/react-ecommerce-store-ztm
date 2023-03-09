@@ -3,55 +3,54 @@ What I have learned (ZTM Complete React Developer 2023)
 
 <ul>
 <li>
-• Build enterprise level React applications and deploy to production (using React 18)
+Build enterprise level React applications and deploy to production (using React 18)
 </li>
 <li>
-• Learn to build reactive, performant, large scale applications like a senior developer.
+Learn to build reactive, performant, large scale applications like a senior developer.
 </li>
 <li>
-• Learn the latest features in React including Hooks, Context API, Suspense, React Lazy + more.
+Learn the latest features in React including Hooks, Context API, Suspense, React Lazy + more.
 </li>
 <li>
-• Master the latest ecosystem of a React Developer from scratch.
+Master the latest ecosystem of a React Developer from scratch.
 </li>
 <li>
-• Using GraphQL as a React Developer
+Using GraphQL as a React Developer
 </li>
 <li>
-• Use Redux, Redux Thunk and Redux Saga in your applications.
+Use Redux, Redux Thunk and Redux Saga in your applications.
 </li>
 <li>
-• Learn to compare tradeoffs when it comes to different state management.
+Learn to compare tradeoffs when it comes to different state management.
 </li>
 <li>
-• Set up authentication and user accounts.
+Set up authentication and user accounts.
 </li>
 <li>
-• Use Firebase to build full stack applications.
+Use Firebase to build full stack applications.
 </li>
 <li>
-• Learn to lead React projects by making good architecture decisions.
+Learn to lead React projects by making good architecture decisions.
 </li>
 <li>
-• Master React Design Patterns
+Master React Design Patterns
 </li>
 <li>
-• Learn CSS in JS with styled-components.
+Learn CSS in JS with styled-components.
 </li>
-• Routing with React Router
+Routing with React Router
 <li>
-• Converting apps to Progressive Web Apps
-</li>
-<li>
-• Testing your application with Jest, Enzyme, and snapshot testing
+Converting apps to Progressive Web Apps
 </li>
 <li>
-• Handling online payments with Stripe API
+Testing your application with Jest, Enzyme, and snapshot testing
 </li>
 <li>
-• Using the latest ES6/ES7/ES8/ES9/ES10/ES11 JavaScript to write clean code.
+Handling online payments with Stripe API
 </li>
-
+<li>
+Using the latest ES6/ES7/ES8/ES9/ES10/ES11 JavaScript to write clean code.
+</li>
 </ul>
 
 # Getting Started with Create React App
